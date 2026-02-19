@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App - Dark Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Weather App</h1>
+        
+        <!-- DARK MODE TOGGLE -->
+        <div class="mode-toggle">
+            <span>☀️</span>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+            <span>🌙</span>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Chennai or any city..." value="London">
+            <button onclick="getWeather()">Search</button>
+        </div>
+        
+        <div id="weatherInfo" class="weather-card hidden">
+            <h2 id="cityName">-</h2>
+            <div class="temp-container">
+                <span id="temperature" class="temp">-</span>
+                <span id="weatherDesc">-</span>
+            </div>
+            <img id="weatherIcon" src="" alt="">
+            <div class="details">
+                <div>Humidity: <span id="humidity">-</span></div>
+                <div>Wind: <span id="windSpeed">-</span></div>
+            </div>
+        </div>
+        
+        <div id="errorMsg" class="error hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
